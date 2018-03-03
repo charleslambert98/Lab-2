@@ -2,7 +2,7 @@ package pkgCore;
 
 public class Deck {
 
-	//	TODO: Add 'cards' attribute that is an ArrayList of Card
+	ArrayList Card = new ArrayList();
 	
 	
 	//	TODO: Add a contructor that passes in the number of decks, and then populates
