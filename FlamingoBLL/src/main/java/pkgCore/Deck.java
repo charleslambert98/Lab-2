@@ -1,17 +1,20 @@
 package pkgCore;
 
 public class Deck {
+	
+	private ArrayList<Card> Card = new ArrayList<Card>();
 
-	ArrayList<String> Card = new ArrayList<String>();
-	
-	
-	//	TODO: Add a contructor that passes in the number of decks, and then populates
-	//			ArrayList<Card> with cards (depending on number of decks).
-	
-	//			Example: Deck(1) will build one 52-card deck.  There are 52 different cards
-	//			2 clubs, 3 clubs... Ace clubs, 2 hearts, 3 hearts... Ace hearts, etc
-	
-	//			Deck(2) will create an array of 104 cards.
+	public Deck(int numDecks) {
+		super();
+		for (int i = 1; i <= numDecks; i++) {
+				for (int j = 1; j <= 4; j++) {
+						for (int k = 1; k <= 13; k++) {
+								Card card = new Card(eRank.values()[k],eSuit.values()[j-1]);
+								this.Card.add(card);
+						}
+				}
+		}
+	}
 	
 	
 	//	TODO: Add a draw() method that will take a card from the deck and
