@@ -1,5 +1,6 @@
 package pkgCore;
 import pkgEnum.*;
+
 public class Card implements Comparable {
 
 	private enum eRank;

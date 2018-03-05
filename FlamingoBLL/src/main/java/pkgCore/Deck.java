@@ -2,7 +2,7 @@ package pkgCore;
 
 public class Deck {
 
-	ArrayList Card = new ArrayList();
+	ArrayList<String> Card = new ArrayList<String>();
 	
 	
 	//	TODO: Add a contructor that passes in the number of decks, and then populates
