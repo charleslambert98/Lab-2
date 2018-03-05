@@ -3,28 +3,29 @@ import pkgEnum.*;
 
 public class Card implements Comparable {
 
-	private enum eRank;
-	private enum eSuit;
+	private eRank rank;
+	private eSuit eSuit;
 	
 	
-	public Card(enum eRank, enum eSuit) {
+	public Card(eRank rank, eSuit suit) {
 		super();
-		this.eRank = eRank;
-		this.eSuit = eSuit;
+		this.rank = rank;
+		this.suit = suit;
 	}
 	
-	public enum geteRank() {
-		return this.eRank;
+	public eRank geteRank() {
+		return this.rank;
+		
 	}
-	public void seteRank(enum eRank) {
-		this.eRank = eRank;
+	public void seteRank(eRank rank) {
+		this.rank = rank;
 	}
 	
-	public enum geteSuit() {
-		return this.eSuit;
+	public eSuit geteSuit() {
+		return this.suit;
 	}
-	public void seteRank(enum eSuit) {
-		this.eRank = eSuit;
+	public void seteSuit(eSuit suit) {
+		this.suit = suit;
 	}
 	
 	@Override
