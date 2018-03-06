@@ -17,7 +17,7 @@ public class Deck {
 	}
 	
 	public Card draw() {
-		return this.Cards.get(rand.nextInt(52)+1);
+		return this.Card.get(rand.nextInt(52)+1);
 	
 	
 	//	TODO: Add a draw() method that will take a card from the deck and
