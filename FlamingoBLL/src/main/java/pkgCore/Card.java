@@ -17,14 +17,14 @@ public class Card implements Comparable {
 		return this.rank;
 		
 	}
-	public void seteRank(eRank rank) {
+	private void seteRank(eRank rank) {
 		this.rank = rank;
 	}
 	
 	public eSuit geteSuit() {
 		return this.suit;
 	}
-	public void seteSuit(eSuit suit) {
+	private void seteSuit(eSuit suit) {
 		this.suit = suit;
 	}
 	
