@@ -7,6 +7,7 @@ public class Hand {
 
 	private int iScore;
 	private ArrayList<Card> cards = new ArrayList<Card>();
+	private int rankNumber;
 	
 	public Hand()
 	{
@@ -15,16 +16,29 @@ public class Hand {
 	
 	public int[] ScoreHand()
 	{
-		int [] iScore = new int[2];
+		int [] iScore = new int[1];
 		
-		iScore[0] = 5;
-		iScore[1] = 10;
+		iScore[0] = 0;
 		
 		Collections.sort(cards);
 		
 		
 		for (Card c: cards)
 		{
+			rankNumber = c.geteRank().getiRankNbr();
+			
+			if (rankNumber > 10 && rankNumber < 14) {
+				rankNumber = 10;
+			}
+			else if (rankNumber == 14 || rankNumber == 1) {
+				if (iScore[0] + 11 > 21) {
+					rankNumber = 1;
+				}
+				else {
+					rankNumber = 11;
+				}
+			}
+			iScore[0] += rankNumber;
 			//	TODO: Determine the score.  
 			//			Cards:
 			//			2-3-4 - score = 11
