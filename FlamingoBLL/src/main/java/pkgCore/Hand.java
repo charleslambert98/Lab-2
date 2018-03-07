@@ -38,8 +38,9 @@ public class Hand {
 		return iScore;
 	}
 	
-	public void Draw(Deck d)
+	public void Draw(Deck d) throws Exception
 	{
+		AddCard(d.draw());
 		//	TODO: add a card to 'cards' from a card drawn from Deck d
 	}
 	
