@@ -10,7 +10,7 @@ public class Deck {
 	
 	Random rand = new Random();
 	
-	private ArrayList<Card> Cards = new ArrayList<Card>();
+	public ArrayList<Card> Cards = new ArrayList<Card>();
 
 	public Deck(int numDecks) {
 		super();
