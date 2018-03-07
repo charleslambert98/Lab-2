@@ -1,10 +1,16 @@
 package pkgCore;
 
-import java.util.Collections;
+
+import java.util.*;
+import pkgEnum.*;
+import java.lang.Math.*;
+
 
 public class Deck {
 	
-	private ArrayList<Card> Cards = new ArrayList<Card>();
+	Random rand = new Random();
+	
+	public ArrayList<Card> Cards = new ArrayList<Card>();
 
 	public Deck(int numDecks) {
 		super();
@@ -26,4 +32,5 @@ public class Deck {
 		Card drawnCard = this.Cards.get(rand.nextInt(52)+1);
 		Cards.remove(drawnCard);
 		return drawnCard;
+}
 }
