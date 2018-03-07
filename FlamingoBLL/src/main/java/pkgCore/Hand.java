@@ -41,7 +41,6 @@ public class Hand {
 	public void Draw(Deck d) throws Exception
 	{
 		AddCard(d.draw());
-		//	TODO: add a card to 'cards' from a card drawn from Deck d
 	}
 	
 	private void AddCard(Card c)
