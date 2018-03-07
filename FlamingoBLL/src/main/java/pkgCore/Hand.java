@@ -49,7 +49,6 @@ public class Hand {
 			//			4-A = score = 5 or 15
 			
 		}
-		
 		return iScore;
 	}
 	
