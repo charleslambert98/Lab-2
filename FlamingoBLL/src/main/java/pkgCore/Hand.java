@@ -47,6 +47,7 @@ public class Hand {
 			//			J-Q	- score = 20
 			//			8-A = score = 9 or 19
 			//			4-A = score = 5 or 15
+			
 		}
 		
 		return iScore;
