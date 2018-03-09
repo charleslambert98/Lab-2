@@ -81,8 +81,6 @@ public class HandTest {
 
 		ArrayList<Card> cards = new ArrayList<Card>();
 		
-		
-		
 		cards.add(new Card(eSuit.CLUBS,eRank.TWO));
 		cards.add(new Card(eSuit.CLUBS,eRank.THREE));
 		cards.add(new Card(eSuit.CLUBS,eRank.FOUR));
@@ -94,65 +92,90 @@ public class HandTest {
 
 	@Test
 	public void test2() {
+		ArrayList<Card> cards = new ArrayList<Card>();
+		
 		cards.add(new Card(eSuit.CLUBS,eRank.TWO));
 		cards.add(new Card(eSuit.CLUBS,eRank.THREE));
 		cards.add(new Card(eSuit.CLUBS,eRank.JACK));
 		
+		int[] score = HandHelper(cards);
+
 		assertEquals(score[0],15);
 	}
 
 	@Test
 	public void test3() {
+		ArrayList<Card> cards = new ArrayList<Card>();
+
 		cards.add(new Card(eSuit.CLUBS,eRank.TWO));
 		cards.add(new Card(eSuit.CLUBS,eRank.THREE));
 		cards.add(new Card(eSuit.CLUBS,eRank.JACK));
 		cards.add(new Card(eSuit.CLUBS,eRank.JACK));
 
-		
+		int[] score = HandHelper(cards);
+
 		assertEquals(score[0],25);
 	}
 
 	@Test
 	public void test4() {
+		ArrayList<Card> cards = new ArrayList<Card>();
+
 		cards.add(new Card(eSuit.CLUBS,eRank.JACK));
 		cards.add(new Card(eSuit.CLUBS,eRank.ACE));
 		
-		assertEquals(score[0],21);
+		int[] score = HandHelper(cards);
+
+		assertEquals(score[0],11);
+		assertEquals(score[1],21);
 
 
 	}
 
 	@Test
 	public void test5() {
+		ArrayList<Card> cards = new ArrayList<Card>();
+
 		cards.add(new Card(eSuit.CLUBS,eRank.JACK));
 		cards.add(new Card(eSuit.CLUBS,eRank.ACE));
 		cards.add(new Card(eSuit.CLUBS,eRank.ACE));
 
-		
+		int[] score = HandHelper(cards);
+
 		assertEquals(score[0],12);
+		assertEquals(score[1],22);
 	}
 
 	@Test
 	public void test6() {
+		ArrayList<Card> cards = new ArrayList<Card>();
+
 		cards.add(new Card(eSuit.CLUBS,eRank.JACK));
 		cards.add(new Card(eSuit.CLUBS,eRank.ACE));
 		cards.add(new Card(eSuit.CLUBS,eRank.ACE));
 		cards.add(new Card(eSuit.CLUBS,eRank.ACE));
 
 
-		
+		int[] score = HandHelper(cards);
+
 		assertEquals(score[0],13);
+		assertEquals(score[1],23);
 	}
 	
 	@Test
 	public void test7() {
+		ArrayList<Card> cards = new ArrayList<Card>();
+
 		cards.add(new Card(eSuit.CLUBS,eRank.ACE));
 		cards.add(new Card(eSuit.CLUBS,eRank.ACE));
 		cards.add(new Card(eSuit.CLUBS,eRank.ACE));
 		cards.add(new Card(eSuit.CLUBS,eRank.ACE));
 		cards.add(new Card(eSuit.CLUBS,eRank.TWO));
 		
-		assertEquals(score[0],16);
+		int[] score = HandHelper(cards);
+
+		assertEquals(score[0],6);
+		assertEquals(score[1],16);
 
 	}
 

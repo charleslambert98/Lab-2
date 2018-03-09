@@ -15,9 +15,9 @@ public class Deck {
 	public Deck(int numDecks) {
 		super();
 		for (int i = 1; i <= numDecks; i++) {
-				for (int j = 1; j <= 4; j++) {
-						for (int k = 1; k <= 13; k++) {
-								Card card = new Card(eRank.values()[k],eSuit.values()[j-1]);
+				for (int j = 1; j <= eSuit.values().length; j++) {
+						for (int k = 1; k <= eRank.values().length; k++) {
+								Card card = new Card(eSuit.values()[j-1],eRank.values()[k]);
 								this.Cards.add(card);
 						}
 				}
@@ -25,12 +25,16 @@ public class Deck {
 		Collections.shuffle(Cards);
 	}
 	
+	public Deck() {
+		this(1);
+	}
+	
 	public Card draw() throws Exception {
 		if (Cards.size() == 0) {
 			throw new Exception("Deck is empty");
 		}
-		Card drawnCard = this.Cards.get(rand.nextInt(52)+1);
+		Card drawnCard = this.Cards.get(0);
 		Cards.remove(drawnCard);
 		return drawnCard;
-}
+	}
 }

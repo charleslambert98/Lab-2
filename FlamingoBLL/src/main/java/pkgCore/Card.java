@@ -7,7 +7,7 @@ public class Card implements Comparable {
 	private eSuit suit;
 	
 	
-	public Card(eRank rank, eSuit suit) {
+	public Card(eSuit suit, eRank rank) {
 		super();
 		this.rank = rank;
 		this.suit = suit;

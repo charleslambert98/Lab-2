@@ -16,30 +16,37 @@ public class Hand {
 	
 	public int[] ScoreHand()
 	{
-		int [] iScore = new int[1];
+		int [] iScore = new int[2];
 		
 		iScore[0] = 0;
+		iScore[1] = 0;
 		
 		Collections.sort(cards);
 		
 		
-		for (Card c: cards)
+		for (int i = 0; i < cards.size(); i++)
 		{
-			rankNumber = c.geteRank().getiRankNbr();
+			rankNumber = cards.get(i).geteRank().getiRankNbr();
 			
+			
+			if (rankNumber >= 2 && rankNumber <= 10) {
+				iScore[0] += rankNumber;
+				iScore[1] += rankNumber;
+			}
 			if (rankNumber > 10 && rankNumber < 14) {
 				rankNumber = 10;
+				iScore[0] += rankNumber;
+				iScore[1] += rankNumber;
 			}
 			else if (rankNumber == 14 || rankNumber == 1) {
-				if (iScore[0] + 11 > 21) {
-					rankNumber = 1;
+				iScore[0] += 1;
+				if (iScore[1] + 11 > 21) {
+					iScore[1] += 1;
 				}
 				else {
-					rankNumber = 11;
+					iScore[1] += 11;
 				}
 			}
-			iScore[0] += rankNumber;
-			
 		}
 		return iScore;
 	}
@@ -55,3 +62,4 @@ public class Hand {
 	}
 	
 }
+//cards.get(i-1).geteRank().getiRankNbr() == 14 || cards.get(i-1).geteRank().getiRankNbr() == 1
